@@ -1,0 +1,19 @@
+<p-card class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-fluid p-col-12">
+        <div class="p-text-center">
+            <img class="image-review" [src]="fileInfo.path" [alt]="fileInfo.originalname">
+        </div>
+        <label for="filename">Filename</label>
+        <input id="filename" type="filename" pInputText [value]="fileInfo.originalname">
+        <label for="directLink">Direct Link</label>
+        <input id="directLink" type="directLink" pInputText [value]="fileInfo.path">
+        <label for="viewLink">View Link</label>
+        <input id="viewLink" type="viewLink" pInputText [value]="fileInfo.view">
+    </div>
+    <br>
+    <div class="p-field p-fluid p-col-12">
+        <a [download]="fileInfo.originalname" [href]="fileInfo.path" pButton label="Download" class="download-button p-button-success" icon="pi pi-download" iconPos="right">
+            <strong> {{ fileInfo.size | bytes }} </strong>
+        </a>
+    </div>
+</p-card>

@@ -1,0 +1,15 @@
+.download-button {
+    text-decoration: none;
+}
+
+.image-review {
+    height: 350px;
+    max-width: 100%;
+    background: #ececec;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+::ng-deep p-card .p-component {
+    margin: auto !important;
+}
